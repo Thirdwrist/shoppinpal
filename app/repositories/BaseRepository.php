@@ -15,7 +15,7 @@ class BaseRepository
     protected $pdo;
 
     /**
-     * Create a new QueryBuilder instance.
+     * Get the query builder instance
      *
      */
     public function __construct()
