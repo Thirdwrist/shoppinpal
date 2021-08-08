@@ -5,7 +5,7 @@ namespace App\Rules;
 interface RuleInterface{
 
     /**
-     * Function to determine if the request input passes the validation or not.
+     * This determines if the request input passes the validation or not.
      *
      * @param string $attribute
      * @param mixed $value
@@ -14,10 +14,11 @@ interface RuleInterface{
     function passes(string $attribute, mixed $value);
 
     /**
-     * Message returned when validation fails
+     * Message to return on validation fail
      *
-     * @return string
+     * @param string $attribute
+     * @return void
      */
-    function message();
+    function message(string $attribute);
     
 }

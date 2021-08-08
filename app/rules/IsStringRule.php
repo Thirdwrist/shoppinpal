@@ -9,14 +9,14 @@ class IsStringRule implements RuleInterface{
      */
     public function passes($attribute, $value)
     {
-
+        return is_string($value);
     }
     
      /**
      * @inheritDoc
      */
-    public function message()
+    public function message($attribute)
     {
-
+        return "String type is required for ". ucfirst($attribute) ." field";
     }
 }

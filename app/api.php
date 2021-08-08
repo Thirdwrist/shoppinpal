@@ -1,3 +1,4 @@
 <?php
 
-$router->get('home', 'BaseController@base');
+$router->get('books', 'BookController@index');
+$router->post('books', 'BookController@store');

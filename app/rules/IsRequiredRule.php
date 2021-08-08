@@ -2,6 +2,8 @@
 
 namespace App\Rules;
 
+use App\Nucleus\Request;
+
 class IsRequiredRule implements RuleInterface{
 
     /**
@@ -9,14 +11,14 @@ class IsRequiredRule implements RuleInterface{
      */
     public function passes($attribute, $value)
     {
-
+        return !is_null($value);
     }
     
      /**
      * @inheritDoc
      */
-    public function message()
+    public function message($attribute)
     {
-
+        return ucfirst($attribute) ." field is required";
     }
 }

@@ -23,10 +23,14 @@ class BookController extends BaseController
         $this->bookService = new BookService();   
     }
 
+    /**
+     * Create new book in application
+     *
+     * @return Json
+     */
     public function store()
     {
         $this->validate([
-            'book'=>['required', 'pdf'],
             'title'=>['required', 'string'], 
             'author'=>['required', 'string'],
             'release_date'=>['required', 'date'],
@@ -38,17 +42,35 @@ class BookController extends BaseController
         return $this->response(201, 'Created book resource successfully', $book);
     }
 
-    public function show()
+    /**
+     * Create new book in application
+     * 
+     * @param integer $bookId
+     * @return Json
+     */
+    public function show(int $bookId)
     {
 
     }
 
-    public function update()
+    /**
+     * Update book on application
+     *
+     * @param integer $bookId
+     * @return Json
+     */
+    public function update(int $bookId)
     {
 
     }
 
-    public function delete()
+    /**
+     * Delete book from application
+     *
+     * @param integer $bookId
+     * @return Json
+     */
+    public function delete(int $bookId)
     {
 
     }

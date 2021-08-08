@@ -9,14 +9,14 @@ class IsIntegerRule implements RuleInterface{
      */
     public function passes($attribute, $value)
     {
-
+        return is_integer($value);
     }
     
      /**
      * @inheritDoc
      */
-    public function message()
+    public function message($attribute)
     {
-
+        return ucfirst($attribute) ." should be an integer";
     }
 }

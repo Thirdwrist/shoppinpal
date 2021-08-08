@@ -4,14 +4,16 @@ use App\Rules\{
     IsStringRule, 
     IsRequiredRule, 
     IsIntegerRule, 
-    IsPDFRule, 
     IsDateRule
 };
 
+/**
+ * 
+ * Validation rules, must all extend RuleInterface
+ */
 return [
     'required'=> IsRequiredRule::class,
     'string'=> IsStringRule::class,
     'integer'=>IsIntegerRule::class, 
-    'pdf'=>IsPDFRule::class, 
     'date'=> IsDateRule::class
 ];
