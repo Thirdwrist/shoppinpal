@@ -1,3 +1,3 @@
-<?
+<?php
 
-// $router->get('', '@');
+$router->get('home', 'BaseController@base');

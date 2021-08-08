@@ -1,7 +1,7 @@
 <?php
 
 require 'vendor/autoload.php';
-require 'core/bootstrap.php';
+require 'nucleus/bootstrap.php';
 
 use App\Nucleus\{Router, Request};
 
