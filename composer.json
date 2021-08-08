@@ -1,0 +1,19 @@
+{
+    "name": "akunne/tst-api",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Akunne Obinna",
+            "email": "akunneobinna@gmail.com"
+        }
+    ],
+    "require": {
+
+    }, 
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    }
+}
