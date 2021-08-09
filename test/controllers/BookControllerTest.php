@@ -2,7 +2,7 @@
 
 namespace App\Tests;
 
-class BookController
+class BookControllerTest
 {
-    
+
 }

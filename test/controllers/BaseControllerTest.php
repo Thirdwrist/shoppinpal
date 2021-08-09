@@ -2,7 +2,7 @@
 
 namespace App\Tests;
 
-class BaseController
+class BaseControllerTest
 {
     
 }
