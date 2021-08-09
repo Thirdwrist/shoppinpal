@@ -51,3 +51,5 @@ have list above.
 - [ ] Make release date nullable on validation and DB schema
 - [ ] Create a setup guide
 - [ ] Explain thought process
+- [ ] Mention design patterns used across the application and links
+- [ ] How to execute test effectively

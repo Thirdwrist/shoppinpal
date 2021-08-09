@@ -4,5 +4,5 @@ namespace App\Tests;
 
 class BaseServiceTest
 {
-
+    
 }
