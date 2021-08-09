@@ -49,3 +49,5 @@ have list above.
 - [ ] Validation to stop multiple books of same isbn
 - [ ] Remove Database credentials in version control
 - [ ] Make release date nullable on validation and DB schema
+- [ ] Create a setup guide
+- [ ] Explain thought process
