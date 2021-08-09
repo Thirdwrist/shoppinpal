@@ -33,7 +33,7 @@ class BookController extends BaseController
     /**
      * Create new book in application
      *
-     * @return Json
+     * @return string
      */
     public function store()
     {
@@ -53,7 +53,7 @@ class BookController extends BaseController
      * Create new book in application
      * 
      * @param integer $bookId
-     * @return Json
+     * @return string
      */
     public function show(int $bookId)
     {
@@ -64,7 +64,7 @@ class BookController extends BaseController
      * Update book on application
      *
      * @param integer $bookId
-     * @return Json
+     * @return string
      */
     public function update(int $bookId)
     {
@@ -75,7 +75,7 @@ class BookController extends BaseController
      * Delete book from application
      *
      * @param integer $bookId
-     * @return Json
+     * @return string
      */
     public function delete(int $bookId)
     {

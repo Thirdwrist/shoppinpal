@@ -10,6 +10,16 @@ use Exception;
  */
 trait Validate
 {
+    /**
+     * Json response method 
+     *
+     * @param int $status
+     * @param string $message
+     * @param array $data
+     * @param array $error
+     * @return void
+     */
+    abstract function response($status, $message, $data, $error);
     
     /**
      * Collect inputs and their rules for validation
