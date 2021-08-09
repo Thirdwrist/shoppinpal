@@ -9,6 +9,7 @@ class ComposerStaticInitffa5f4b157089dbfd3406ebfa5b0735e
     public static $classMap = array (
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/controllers/BaseController.php',
         'App\\Controllers\\BookController' => __DIR__ . '/../..' . '/app/controllers/BookController.php',
+        'App\\Controllers\\Concerns\\Validate' => __DIR__ . '/../..' . '/app/controllers/concerns/Validate.php',
         'App\\Nucleus\\App' => __DIR__ . '/../..' . '/nucleus/App.php',
         'App\\Nucleus\\Database\\Connection' => __DIR__ . '/../..' . '/nucleus/database/Connection.php',
         'App\\Nucleus\\Request' => __DIR__ . '/../..' . '/nucleus/Request.php',

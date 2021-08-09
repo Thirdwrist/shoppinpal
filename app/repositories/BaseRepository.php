@@ -57,7 +57,8 @@ class BaseRepository
 
             $statement->execute($parameters);
         } catch (\Exception $e) {
-            //
+            echo($e->getMessage());
+            exit;
         }
     }
 }

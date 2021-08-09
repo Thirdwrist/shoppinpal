@@ -23,6 +23,13 @@ class BookController extends BaseController
         $this->bookService = new BookService();   
     }
 
+    public function index()
+    {
+        $data = $this->bookService->getBooks();
+
+        return $this->response(200, 'Fetched all books', $data);
+    }
+
     /**
      * Create new book in application
      *

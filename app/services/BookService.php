@@ -2,8 +2,30 @@
 
 namespace App\Services;
 
+use App\Nucleus\App;
+use App\Repositories\BookRepository;
+
 class BookService extends BaseService{
     
+    /**
+     * Book repository
+     *
+     * @var BookRepository
+     */
+    protected $bookRepository;
+
+    /**
+     * DB name
+     *
+     * @var string
+     */
+    protected $db;
+
+    public function __construct()
+    {
+        $this->bookRepository = new BookRepository;
+        $this->db = App::get('config')['database']['name'];
+    }
 
     /**
      * Business logic to process and store books
@@ -13,6 +35,13 @@ class BookService extends BaseService{
      */
     public function storeBook(array $data)
     {
+        $this->bookRepository->insert( $this->db.'.books', [
+            'title'=>$data['title'], 
+            'author'=>$data['author'], 
+            'release_date'=> $data['release_date'],
+            'isbn'=> $data['isbn']
+        ]);
+
         return; 
     }
 
@@ -46,7 +75,7 @@ class BookService extends BaseService{
      */
     public function getBooks()
     {
-        return;
+        return $this->bookRepository->selectAll($this->db.'.books');
     }
 
     /**

@@ -28,8 +28,8 @@ class Request
 
     public static function get(string $key, $default = null)
     {
-        if(array_key_exists($key, $_POST)){
-            return $_POST[$key];
+        if(array_key_exists($key, static::all())){
+            return static::all()[$key];
         }
 
         return $default;
@@ -37,6 +37,6 @@ class Request
 
     public static function all()
     {
-        return $_POST;
+        return json_decode(file_get_contents("php://input"), true);
     }
 }

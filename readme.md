@@ -4,17 +4,17 @@
 
 ### Create a RESTful web service for a Library. The service must have the following API endpoints:
 
-- [ ] Create a new Book
-- [ ] Read existing Books
+- [x] Create a new Book
+- [x] Read existing Books
 - [ ] Update an existing Book
 - [ ] Delete an existing Book
 
 ### A Book entity has the following properties
 
-- [ ] Author (mandatory)
-- [ ] Title (mandatory)
-- [ ] ISBN (mandatory)
-- [ ] Release Date
+- [x] Author (mandatory)
+- [x] Title (mandatory)
+- [x] ISBN (mandatory)
+- [x] Release Date
 
 ### MUST HAVE Requirements (we will not consider your submission if these are not met)
 
@@ -43,3 +43,9 @@ assess your real coding skills.
 If you feel the task takes too much time, implement only a part of it (like one or two
 endpoints only), but what you implement should meet every requirement from the must
 have list above.
+
+### Todo
+
+- [ ] Validation to stop multiple books of same isbn
+- [ ] Remove Database credentials in version control
+- [ ] Make release date nullable on validation and DB schema
