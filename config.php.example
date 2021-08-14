@@ -2,9 +2,9 @@
 
 return [
     'database' => [
-        'DB_NAME' => 'hub',
-        'DB_USER' => 'root',
-        'DB_PASS' => 'root',
+        'DB_NAME' => 'example',
+        'DB_USER' => 'example',
+        'DB_PASS' => 'example',
         'CONNECTION' => 'mysql:host=localhost;port:8889',
         'OPTIONS' => [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION

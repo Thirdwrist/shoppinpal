@@ -14,13 +14,24 @@ class Connection
      */
     public static function make($config)
     {
-        // die(var_dump($config));
         try {
+
+            // Switch to test DB while running unit tests
+            if($GLOBALS['ENV'] === 'testing')
+            {
+                return new PDO(
+                    $GLOBALS['CONNECTION'].';dbname='.$GLOBALS['DB_NAME'],
+                    $GLOBALS['DB_USER'],
+                    $GLOBALS['DB_PASS'],
+                    $GLOBALS['OPTIONS']
+                );
+            }
+            
             return new PDO(
-                $config['connection'].';dbname='.$config['name'],
-                $config['username'],
-                $config['password'],
-                $config['options']
+                $config['CONNECTION'].';dbname='.$config['DB_NAME'],
+                $config['DB_USER'],
+                $config['DB_PASS'],
+                $config['OPTIONS']
             );
         } catch (PDOException $e) {
             die($e->getMessage());

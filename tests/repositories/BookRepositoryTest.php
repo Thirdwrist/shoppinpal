@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Tests;
-Class BookRepositoryTest
+
+use PHPUnit\Framework\TestCase;
+
+Class BookRepositoryTest extends TestCase
 {
     
 }

@@ -18,11 +18,11 @@
 
 ### MUST HAVE Requirements (we will not consider your submission if these are not met)
 
-- [ ] Code must be covered with unit tests
-- [ ] Clean, easy to understand and maintainable
-- [ ] Be RESTful
-- [ ] Validate inputs
-- [ ] Avoid using frameworks (e.g. Laravel, Sprint Boot) -- we’d like to see all code written
+- [x] Code must be covered with unit tests
+- [x] Clean, easy to understand and maintainable
+- [x] Be RESTful
+- [x] Validate inputs
+- [x] Avoid using frameworks (e.g. Laravel, Sprint Boot) -- we’d like to see all code written
 from the ground up to understand your abilities regardless of a framework
 
 ### Bonus / Nice to have
@@ -47,9 +47,11 @@ have list above.
 ### Todo
 
 - [ ] Validation to stop multiple books of same isbn
-- [ ] Remove Database credentials in version control
+- [x] Remove Database credentials in version control
 - [ ] Make release date nullable on validation and DB schema
 - [ ] Create a setup guide
 - [ ] Explain thought process
 - [ ] Mention design patterns used across the application and links
 - [ ] How to execute test effectively
+- [x] Make Database use test connection while testing
+- [x] Add php.xml.dist configuration settings

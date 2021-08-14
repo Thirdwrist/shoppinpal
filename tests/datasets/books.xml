@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="books">
+        <column>id</column>
+        <column>author</column>
+        <column>title</column>
+        <column>isbn</column>
+        <column>release_date</column>
+        <column>created_at</column>
+        <column>updated_at</column>
+        <row>
+            <value>1</value>
+            <value>Obinna Akunne</value>
+            <value>How to get a job at Shoppinpal</value>
+            <value>1245343d</value>
+            <value>2021-08-14</value>
+            <value>2021-08-14 17:15:23</value>
+            <value>2021-08-14 17:15:23</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>Obinna Akunne</value>
+            <value>How To be a proper software developer</value>
+            <value>12425343d</value>
+            <null />
+            <value>2021-08-14 17:15:23</value>
+            <value>2021-08-14 17:15:23</value>
+        </row>
+    </table>
+</dataset>

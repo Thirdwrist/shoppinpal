@@ -1,2 +1,4 @@
 /vendor
 /.vscode
+phpunit.xml
+config.php

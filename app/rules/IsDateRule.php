@@ -4,7 +4,8 @@ namespace App\Rules;
 
 use DateTime;
 
-class IsDateRule implements RuleInterface{
+class IsDateRule implements RuleInterface
+{
 
     /**
      * @inheritDoc

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit
+    bootstrap="nucleus/bootstrap.php"    
+>
+    <php>
+        <var name="ENV" value="testing" />
+        <var name="CONNECTION" value="mysql:dbname=hub;host=localhost;port:8889" />
+        <var name="DB_USER" value="YOUR_DB_USERNAME" />
+        <var name="DB_PASS" value="YOUR_DB_USERNAME_PASS" />
+        <var name="DB_DBNAME" value="YOUR_DB_NAME" />
+    </php>
+</phpunit>
