@@ -7,5 +7,5 @@
  * 
  */
 
-$router->get('books', 'BookController@index');
-$router->post('books', 'BookController@store');
+$router->get('api/books', 'BookController@index');
+$router->post('api/books', 'BookController@store');

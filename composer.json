@@ -1,5 +1,5 @@
 {
-    "name": "akunne/tst-api",
+    "name": "akunne/test-api",
     "type": "project",
     "license": "mit",
     "authors": [
@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^7.3"
+        "guzzlehttp/guzzle": "^7.3",
+        "zircote/swagger-php": "^3.2"
     }, 
     "autoload": {
         "classmap": [

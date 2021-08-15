@@ -17,7 +17,7 @@ interface RuleInterface{
      * Message to return on validation fail
      *
      * @param string $attribute
-     * @return void
+     * @return string
      */
     function message(string $attribute);
     
