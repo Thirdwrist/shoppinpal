@@ -25,7 +25,13 @@ class Request
     {
         return $_SERVER['REQUEST_METHOD'];
     }
-
+    /**
+     * Get request body parameter
+     *
+     * @param string $key
+     * @param mixed $default
+     * @return mixed
+     */
     public static function get(string $key, $default = null)
     {
         if(array_key_exists($key, static::all())){
@@ -35,6 +41,11 @@ class Request
         return $default;
     }
 
+    /**
+     * Get all request body content
+     *
+     * @return array
+     */
     public static function all()
     {
         return json_decode(file_get_contents("php://input"), true);

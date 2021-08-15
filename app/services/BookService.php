@@ -23,7 +23,7 @@ class BookService extends BaseService{
      * Business logic to process and store books
      *
      * @param array $data
-     * @return array
+     * @return bool
      */
     public function storeBook(array $data)
     {
@@ -34,7 +34,7 @@ class BookService extends BaseService{
             'isbn'=> $data['isbn']
         ]);
 
-        return; 
+        return true; 
     }
 
     /**
@@ -67,7 +67,7 @@ class BookService extends BaseService{
      */
     public function getBooks()
     {
-        return $this->bookRepository->selectAll($this->db.'.books');
+        return $this->bookRepository->selectAll('books');
     }
 
     /**

@@ -44,9 +44,9 @@ class BookController extends BaseController
             'isbn'=>['required', 'integer']
         ]);
 
-        $book = $this->bookService->storeBook(Request::all());
+        $this->bookService->storeBook(Request::all());
 
-        return $this->response(201, 'Created book resource successfully', $book);
+        return $this->response(201, 'Created book resource successfully');
     }
 
     /**

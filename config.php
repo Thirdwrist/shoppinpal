@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'APP_URL'=>'localhost:8000',
     'database' => [
         'DB_NAME' => 'hub',
         'DB_USER' => 'root',
@@ -10,4 +11,5 @@ return [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]
     ]
+
 ];

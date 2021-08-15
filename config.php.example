@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'APP_URL'=>'localhost:8000',
     'database' => [
         'DB_NAME' => 'example',
         'DB_USER' => 'example',

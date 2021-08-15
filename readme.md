@@ -27,7 +27,7 @@ from the ground up to understand your abilities regardless of a framework
 
 ### Bonus / Nice to have
 
-- [ ] Endpoints covered with system/functional tests
+- [x] Endpoints covered with system/functional tests
 - [ ] API documented (OpenAPI)
 - [ ] Dockerize your application, i.e. besides the GitHub code repo please also host it and
 give us a demo link [you can use a trial account of AWS/GCP/Azure to do this]
