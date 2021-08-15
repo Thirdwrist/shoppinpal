@@ -8,4 +8,7 @@
  */
 
 $router->get('api/books', 'BookController@index');
+
 $router->post('api/books', 'BookController@store');
+
+$router->get('api/docs/json', 'BookController@json');

@@ -33,7 +33,7 @@ class BookControllerTest extends TestCase
             'release_date'=>'2020-01-01'
         ];
 
-        $res = $this->request->post('books', ['json'=> $data]);
+        $res = $this->request->post('api/books', ['json'=> $data]);
 
         $body = json_decode($res->getBody(), true);
        
@@ -52,7 +52,7 @@ class BookControllerTest extends TestCase
         ];
 
         try{
-            $this->request->post('books', ['json'=> $data]);
+            $this->request->post('api/books', ['json'=> $data]);
         }catch(ClientException $ex){
         
             $body = json_decode($ex->getResponse()->getBody(), true);
@@ -71,7 +71,7 @@ class BookControllerTest extends TestCase
 
     public function testGetAllBooksResponse()
     {
-        $res = $this->request->get('books');
+        $res = $this->request->get('api/books');
 
         $body = json_decode($res->getBody(), true);
 

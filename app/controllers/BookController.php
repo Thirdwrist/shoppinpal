@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Nucleus\Request;
 use App\Services\BookService;
+use Generator;
+use OpenApi\Annotations as OA;
 
 /**
  * @OA\Info(title="ShoppinPal OpenAPI docs", version="1.0")
@@ -89,10 +91,7 @@ class BookController extends BaseController
      * @param integer $bookId
      * @return string
      */
-    public function show(int $bookId)
-    {
-
-    }
+    public function show(int $bookId){}
 
     /**
      * Update book on application
@@ -100,10 +99,7 @@ class BookController extends BaseController
      * @param integer $bookId
      * @return string
      */
-    public function update(int $bookId)
-    {
-
-    }
+    public function update(int $bookId){}
 
     /**
      * Delete book from application
@@ -111,8 +107,17 @@ class BookController extends BaseController
      * @param integer $bookId
      * @return string
      */
-    public function delete(int $bookId)
+    public function delete(int $bookId){}
+    
+    /**
+     * Return the json documentation for the AP
+     *
+     * @return void
+     */
+    public function json()
     {
-
+        $openapi = Generator::scan([dirname(__FILE__).'/../controllers/']);
+        header('Content-Type: application/x-yaml');
+        echo $openapi->toJson();
     }
 }
