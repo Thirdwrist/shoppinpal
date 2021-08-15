@@ -14,17 +14,9 @@ class BookService extends BaseService{
      */
     protected $bookRepository;
 
-    /**
-     * DB name
-     *
-     * @var string
-     */
-    protected $db;
-
     public function __construct()
     {
         $this->bookRepository = new BookRepository;
-        $this->db = App::get('config')['database']['name'];
     }
 
     /**
@@ -35,7 +27,7 @@ class BookService extends BaseService{
      */
     public function storeBook(array $data)
     {
-        $this->bookRepository->insert( $this->db.'.books', [
+        $this->bookRepository->insert('books', [
             'title'=>$data['title'], 
             'author'=>$data['author'], 
             'release_date'=> $data['release_date'],

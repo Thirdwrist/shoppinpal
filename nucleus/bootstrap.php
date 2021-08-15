@@ -9,9 +9,10 @@ use App\Nucleus\App;
 App::bind('config', require 'config.php');
 
 /**
- * Bind the database connection instance to the container 
+ * Bind DB connection instance to the container with respect to the app environment
  */
-App::bind('database', Connection::make(App::get('config')['database']));
+$config = $GLOBALS['ENV'] == 'testing'? $GLOBALS : App::get('config')['database'];
+App::bind('database', Connection::make($config));
 
 /**
  * Bind validation rules

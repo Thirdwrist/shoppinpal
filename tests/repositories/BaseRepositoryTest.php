@@ -1,18 +1,17 @@
 <?php
 namespace App\Tests;
 
-use App\Repositories\BaseRepository;
 use PDO;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\DbUnit\TestCaseTrait;
-use App\Nucleus\App;
+use App\Repositories\BaseRepository;
+
 
 class BaseRepositoryTest extends TestCase
 {
     use TestCaseTrait;
 
-
-       // only instantiate pdo once for test clean-up/fixture load
+    // only instantiate pdo once for test clean-up/fixture load
     static private $pdo = null;
 
     // only instantiate PHPUnit_Extensions_Database_DB_IDatabaseConnection once per test
@@ -27,9 +26,9 @@ class BaseRepositoryTest extends TestCase
     {
          if ($this->conn === null) {
             if (self::$pdo == null) {
-                self::$pdo = new PDO($GLOBALS['DB_DSN'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASSWD']);
+                self::$pdo = new PDO($GLOBALS['CONNECTION'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASS']);
             }
-            $this->conn = $this->createDefaultDBConnection(self::$pdo, $GLOBALS['DB_DBNAME']);
+            $this->conn = $this->createDefaultDBConnection(self::$pdo, $GLOBALS['DB_NAME']);
         }
 
         return $this->conn;
@@ -43,23 +42,36 @@ class BaseRepositoryTest extends TestCase
         return $this->createXMLDataSet(dirname(__FILE__).'/../datasets/books.xml');
     }
 
-    public function testBooks()
+    /**
+     * Testing creating of books from book repository
+     *
+     * @return void
+     */
+    public function testBooksCreation()
     {
-        $repo = (new BaseRepository())->insert('hub.books', [
+        $this->assertEquals(2, $this->getConnection()->getRowCount('books'));
+
+        (new BaseRepository())->insert('books', [
             'title'=>'testing title',
             'author'=>'testing author',
             'release_date'=>'2021-08-14', 
             'isbn'=>'a12342'
         ]);
 
-        $data = $this->getConnection()->createQueryTable('books', "SELECT * FROM books");
-        $this->assertTablesEqual($repo, $data);
+        $this->assertEquals(3, $this->getConnection()->getRowCount('books'));
     }
 
-    public function testConfig()
+    /**
+     * Testing Selection of all books from bookRepository
+     *
+     * @return void
+     */
+    public function testSelectingAllBooks()
     {
-        $this->assertIsArray(APP::get('config'));
-    }
+        $data = (new BaseRepository())->selectAll('books');
 
+        $dataSet = $this->getConnection()->getRowCount('books');
+        $this->assertSame(count($data) , $dataSet);
+    }
 
 }

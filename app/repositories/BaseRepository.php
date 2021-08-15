@@ -15,12 +15,20 @@ class BaseRepository
     protected $pdo;
 
     /**
+     * DB config values
+     * 
+     * @var string
+     */
+    protected $config;
+
+    /**
      * Get the query builder instance
      *
      */
     public function __construct()
     {
         $this->pdo = App::get('database');
+        $this->config = App::get('config')['database'];
     }
 
     /**
@@ -30,7 +38,7 @@ class BaseRepository
      */
     public function selectAll($table)
     {
-        $statement = $this->pdo->prepare("select * from {$table}");
+        $statement = $this->pdo->prepare("select * from " .$this->config['DB_NAME'].'.'.$table);
 
         $statement->execute();
 
@@ -47,7 +55,7 @@ class BaseRepository
     {
         $sql = sprintf(
             'insert into %s (%s) values (%s)',
-            $table,
+            $this->config['DB_NAME'].'.'.$table,
             implode(', ', array_keys($parameters)),
             ':' . implode(', :', array_keys($parameters))
         );
