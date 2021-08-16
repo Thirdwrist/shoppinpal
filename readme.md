@@ -2,7 +2,7 @@
 
 ## Requirements
 
-### Create a RESTful web service for a Library. The service must have the following API endpoints:
+### Create a RESTful web service for a Library. The service must have the following API endpoints
 
 - [x] Create a new Book
 - [x] Read existing Books
@@ -61,7 +61,7 @@ have list above.
 ## ShoppinPal App Solution description
 
 The entire application is built around the MVC design pattern (partially, as the model class is missing in this context), the request first hits the 
-front controller represented by `index.php`, then the front-controller bootstraps the 
+front controller represented by `index.php`, then the front-controller bootstraps the
 application by first auto-loading all the classes in their proper namespaces using composer, then loading
 `bootstrap.php` which binds the; `config`, `database connection` and `validation rules` to the `App container`.  
 
@@ -86,3 +86,22 @@ application by first auto-loading all the classes in their proper namespaces usi
 
  To run the test execcute this code at the root directory of the app:  
     ``./vendor/bin/phpunit --testdox tests``
+
+## Setup Guide
+
+To start up the application locally, follow these steps mentioned.
+
+### Assumptions
+
+1. You have a PHP environment set up
+2. You have a MySQL server setup
+3. You have PHP version ^7.4
+
+### Guide
+
+1. Clone application locally: `git clone git@github.com:Thirdwrist/shoppinpal.git`
+2. Install composer on your system
+3. Go to root of application and run `composer install`
+4. Create your own copy of `config.php.example` and name it `config.php`, then fill it with the appropriate values.
+5. Create your own copy of `phpunit.xml.dist` and name it `phpunit.xml` then fill with the appropriate values.
+6. Run app from project root on the terminal with: `php -S localhost:8000`
