@@ -82,4 +82,15 @@ class BookControllerTest extends TestCase
         $this->assertSame('Fetched all books', $body['message']);
         $this->assertSame(200, $res->getStatusCode());
     }
+
+    public function testDocumentationJson()
+    {
+         $res = $this->request->get('api/docs/json');
+
+        $body = json_decode($res->getBody(), true);
+
+        $this->assertArrayHasKey('openapi', $body);
+        $this->assertArrayHasKey('paths', $body);
+        $this->assertArrayHasKey('info', $body);
+    }
 }

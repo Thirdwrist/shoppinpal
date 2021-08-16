@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Nucleus\Request;
 use App\Services\BookService;
-use Generator;
+use OpenApi\Generator;
 use OpenApi\Annotations as OA;
 
 /**
@@ -108,7 +108,7 @@ class BookController extends BaseController
      * @return string
      */
     public function delete(int $bookId){}
-    
+
     /**
      * Return the json documentation for the AP
      *
@@ -116,8 +116,8 @@ class BookController extends BaseController
      */
     public function json()
     {
-        $openapi = Generator::scan([dirname(__FILE__).'/../controllers/']);
-        header('Content-Type: application/x-yaml');
-        echo $openapi->toJson();
+        $openAPI = Generator::scan([dirname(__FILE__).'/../controllers/']);
+        header('Content-Type: application/json');
+        echo $openAPI->toJson();
     }
 }
