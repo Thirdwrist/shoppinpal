@@ -10,7 +10,7 @@ use GuzzleHttp\Exception\ClientException;
 class BookControllerTest extends TestCase
 {
     /**
-     * Undocumented variable
+     * The Guzzle Http Client
      *
      * @var Client
      */
@@ -24,6 +24,11 @@ class BookControllerTest extends TestCase
         ]);
     }
 
+    /**
+     * Test book creation endpoint
+     *
+     * @return void
+     */
     public function testCreatedResponse()
     {   
         $data = [
@@ -44,6 +49,11 @@ class BookControllerTest extends TestCase
         $this->assertSame(201, $res->getStatusCode());
     }
 
+    /**
+     * Test book creation endpoint validation
+     *
+     * @return void
+     */
     public function testValidationErrorResponse()
     {
         $data = [
@@ -69,6 +79,11 @@ class BookControllerTest extends TestCase
         }
     }
 
+    /**
+     * Test fetching all books endpoint
+     *
+     * @return void
+     */
     public function testGetAllBooksResponse()
     {
         $res = $this->request->get('api/books');
@@ -83,6 +98,11 @@ class BookControllerTest extends TestCase
         $this->assertSame(200, $res->getStatusCode());
     }
 
+    /**
+     * Test OpenAPI docs endpoint
+     *
+     * @return void
+     */
     public function testDocumentationJson()
     {
          $res = $this->request->get('api/docs/json');

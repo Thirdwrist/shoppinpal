@@ -85,12 +85,13 @@ application by first auto-loading all the classes in their proper namespaces usi
  For testing the app uses [PHPUnit](https://phpunit.de/) for running unit tests and [DBunit](https://phpunit.de/manual/6.5/en/database.html) for testing the data-access layer.
 
  To run the test execute this code at the root directory of the app:  
-    ``./vendor/bin/phpunit --testdox tests``
+    ``./vendor/bin/phpunit --testdox tests`` (Make sure app is setup running before running test)
 
 ### API Documentation
 
 Api is documented with swagger openApi documentation. To access the API in json format hit this route on tbe app
 `api/docs/json`
+
 ## Setup Guide
 
 To start up the application locally, follow these steps mentioned.
