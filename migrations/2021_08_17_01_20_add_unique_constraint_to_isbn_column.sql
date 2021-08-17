@@ -1,2 +1,1 @@
-ALTER TABLE books
-ADD UNIQUE (isbn);
+ALTER TABLE books ADD UNIQUE (isbn);
