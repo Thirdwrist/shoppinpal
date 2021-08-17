@@ -46,9 +46,9 @@ have list above.
 
 ### Todo
 
-- [ ] Validation to stop multiple books of same isbn
+- [ ] Validation to stop multiple books of same isbn (done to database alone)
 - [x] Remove Database credentials in version control
-- [ ] Make release date nullable on validation and DB schema
+- [x] Make release date nullable on validation and DB schema
 - [x] Create a setup guide
 - [x] Explain thought process
 - [x] Mention design patterns used across the application and links

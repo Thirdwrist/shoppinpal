@@ -1,0 +1,2 @@
+ALTER TABLE books
+ADD UNIQUE (isbn);

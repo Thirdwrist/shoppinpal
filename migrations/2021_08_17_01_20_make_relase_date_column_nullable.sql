@@ -1,0 +1,1 @@
+ALTER TABLE books MODIFY release_date DATE NULL;
