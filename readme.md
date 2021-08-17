@@ -65,29 +65,29 @@ front controller represented by `index.php`, then the front-controller bootstrap
 application by first auto-loading all the classes in their proper namespaces using composer, then loading
 `bootstrap.php` which binds the; `config`, `database connection` and `validation rules` to the `App container`.  
 
-## Data Access
+### Data Access
 
  For data access, I access the data though raw sql queries, without the need for a ORM, I store the queries in the 
  repositories for reusability and abstraction of the data access on the data-access layer. Link on [repository pattern](https://makingloops.com/why-should-you-use-the-repository-pattern/) 
 
-## Business Logic
+### Business Logic
 
  The business logic on the application layer is stored in the service classes for reusability accross the application
  and also to maintain a clean controller. Link on [Service classes](http://www.imperativedesign.net/insights/what-is-a-service-class-in-php/)
 
-## Request validation
+### Request validation
 
  For the validation the app uses the strategy pattern to use multiple algorithm implementing the same interface.
  Link to [strategy pattern](https://refactoring.guru/design-patterns/strategy/php/example#lang-features)
 
-## Testing
+### Testing
 
  For testing the app uses [PHPUnit](https://phpunit.de/) for running unit tests and [DBunit](https://phpunit.de/manual/6.5/en/database.html) for testing the data-access layer.
 
- To run the test execcute this code at the root directory of the app:  
+ To run the test execute this code at the root directory of the app:  
     ``./vendor/bin/phpunit --testdox tests``
 
-## API Documentation
+### API Documentation
 
 Api is documented with swagger openApi documentation. To access the API in json format hit this route on tbe app
 `api/docs/json`
