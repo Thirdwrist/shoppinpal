@@ -85,7 +85,7 @@ application by first auto-loading all the classes in their proper namespaces usi
  For testing the app uses [PHPUnit](https://phpunit.de/) for running unit tests and [DBunit](https://phpunit.de/manual/6.5/en/database.html) for testing the data-access layer.
 
  To run the test execute this code at the root directory of the app:  
-    ``./vendor/bin/phpunit --testdox tests`` (Make sure app is setup running before running test)
+    ``./vendor/bin/phpunit --testdox tests`` (Make sure app is setup and running before running test)
 
 ### API Documentation
 
