@@ -28,7 +28,8 @@ class BaseRepository
     public function __construct()
     {
         $this->pdo = App::get('database');
-        $this->config = App::get('config')['database'];
+        $this->config = $GLOBALS['ENV'] == 'testing'? $GLOBALS : App::get('config')['database'];
+
     }
 
     /**
