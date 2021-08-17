@@ -87,6 +87,10 @@ application by first auto-loading all the classes in their proper namespaces usi
  To run the test execcute this code at the root directory of the app:  
     ``./vendor/bin/phpunit --testdox tests``
 
+## API Documentation
+
+Api is documented with swagger openApi documentation. To access the API in json format hit this route on tbe app
+`api/docs/json`
 ## Setup Guide
 
 To start up the application locally, follow these steps mentioned.
@@ -100,8 +104,10 @@ To start up the application locally, follow these steps mentioned.
 ### Guide
 
 1. Clone application locally: `git clone git@github.com:Thirdwrist/shoppinpal.git`
-2. Install composer on your system
-3. Go to root of application and run `composer install`
-4. Create your own copy of `config.php.example` and name it `config.php`, then fill it with the appropriate values.
-5. Create your own copy of `phpunit.xml.dist` and name it `phpunit.xml` then fill with the appropriate values.
-6. Run app from project root on the terminal with: `php -S localhost:8000`
+2. Install composer on your system.
+3. Go to root of application and run `composer install`.
+4. Create a project db.
+5. Create your own copy of `config.php.example` and name it `config.php`, then fill it with the appropriate values.
+6. Pick up all migrations from the migrations folder and run it on your created project db.
+7. Create your own copy of `phpunit.xml.dist` and name it `phpunit.xml` then fill with the appropriate values.
+8. Run app from project root on the terminal with: `php -S localhost:8000`.
