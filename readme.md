@@ -1,7 +1,3 @@
-# Shoppinpal Test
-
-## Requirements
-
 ### Create a RESTful web service for a Library. The service must have the following API endpoints
 
 - [x] Create a new Book
@@ -16,38 +12,21 @@
 - [x] ISBN (mandatory)
 - [x] Release Date
 
-### MUST HAVE Requirements (we will not consider your submission if these are not met)
+### Goals
 
 - [x] Code must be covered with unit tests
 - [x] Clean, easy to understand and maintainable
 - [x] Be RESTful
 - [x] Validate inputs
-- [x] Avoid using frameworks (e.g. Laravel, Sprint Boot) -- we’d like to see all code written
-from the ground up to understand your abilities regardless of a framework
-
-### Bonus / Nice to have
-
+- [x] Demonstrates ability to write clean, well-structured code without relying on frameworks, highlighting core programming skills and deep understanding of software fundamentals.
 - [x] Endpoints covered with system/functional tests
 - [x] API documented (OpenAPI)
 - [ ] Dockerize your application, i.e. besides the GitHub code repo please also host it and
 give us a demo link [you can use a trial account of AWS/GCP/Azure to do this]
 
-### Please Note Footnote
-
-- You could choose to do this test preferably in NodeJS, 2nd preference Golang, or if
-neither is possible go with PHP.
-- Provide a code you can be proud of, something that fully reflects your knowledge of
-development, unit testing, DevOps, scalability and security.
-- We are not curious about if you know how to use existing frameworks, but we’d like to
-assess your real coding skills.
-If you feel the task takes too much time, implement only a part of it (like one or two
-endpoints only), but what you implement should meet every requirement from the must
-have list above.
-
 ### Todo
 
 - [ ] Validation to stop multiple books of same isbn (done to database alone)
-- [x] Remove Database credentials in version control
 - [x] Make release date nullable on validation and DB schema
 - [x] Create a setup guide
 - [x] Explain thought process
@@ -58,7 +37,7 @@ have list above.
   
   <br />
 
-## ShoppinPal App Solution description
+## App Solution description
 
 The entire application is built around the MVC design pattern (partially, as the model class is missing in this context), the request first hits the 
 front controller represented by `index.php`, then the front-controller bootstraps the
